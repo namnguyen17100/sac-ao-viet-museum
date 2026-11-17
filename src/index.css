@@ -1,0 +1,147 @@
+@layer theme, base, bootstrap, components, utilities;
+@import "bootstrap/dist/css/bootstrap.min.css" layer(bootstrap);
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #fff8f5;
+  --color-surface-dim: #e1d8d4;
+  --color-surface-bright: #fff8f5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fbf2ed;
+  --color-surface-container: #f5ece7;
+  --color-surface-container-high: #efe6e2;
+  --color-surface-container-highest: #e9e1dc;
+  --color-on-surface: #1e1b18;
+  --color-on-surface-variant: #4f4447;
+  --color-inverse-surface: #34302c;
+  --color-inverse-on-surface: #f8efea;
+  --color-outline: #817477;
+  --color-outline-variant: #d3c2c6;
+  --color-surface-tint: #7b5361;
+  --color-primary: #391a26;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #522f3c;
+  --color-on-primary-container: #c696a6;
+  --color-inverse-primary: #ecb9c9;
+  --color-secondary: #805434;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fec39b;
+  --color-on-secondary-container: #794e2f;
+  --color-tertiary: #391d00;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #53320d;
+  --color-on-tertiary-container: #ca9a6c;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #ffd9e4;
+  --color-primary-fixed-dim: #ecb9c9;
+  --color-on-primary-fixed: #2f121e;
+  --color-on-primary-fixed-variant: #613c49;
+  --color-secondary-fixed: #ffdcc6;
+  --color-secondary-fixed-dim: #f4ba93;
+  --color-on-secondary-fixed: #301400;
+  --color-on-secondary-fixed-variant: #653d1f;
+  --color-tertiary-fixed: #ffdcbe;
+  --color-tertiary-fixed-dim: #f0bd8c;
+  --color-on-tertiary-fixed: #2d1600;
+  --color-on-tertiary-fixed-variant: #623f19;
+  --color-background: #fff8f5;
+  --color-on-background: #1e1b18;
+  --color-surface-variant: #e9e1dc;
+
+  --font-serif: "Noto Serif", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-on-surface);
+    font-family: var(--font-sans);
+    overscroll-behavior: none;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.museum-hairline {
+  border: 1px solid #d3c2c6;
+}
+
+.museum-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(211, 194, 198, 0.55);
+  border-radius: 0.375rem;
+  transition: border-color 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.museum-card:hover {
+  border-color: #805434;
+  box-shadow: 0 8px 24px rgba(82, 47, 60, 0.06);
+}
+
+.museum-btn-primary {
+  background-color: #522f3c;
+  color: #fff8f5;
+  border: 1px solid #522f3c;
+  border-radius: 0.25rem;
+  transition: background-color 160ms cubic-bezier(0.16, 1, 0.3, 1), transform 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.museum-btn-primary:hover {
+  background-color: #391a26;
+  color: #ffffff;
+}
+
+.museum-btn-secondary {
+  background-color: transparent;
+  color: #391a26;
+  border: 1px solid #805434;
+  border-radius: 0.25rem;
+  transition: background-color 160ms cubic-bezier(0.16, 1, 0.3, 1), color 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.museum-btn-secondary:hover {
+  background-color: #f5ece7;
+}
+
+.museum-tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0.25rem;
+  padding: 0.1875rem 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-highest": "#e9e1dc", "on-tertiary-fixed": "#2d1600", "secondary": "#805434", "error-container": "#ffdad6", "inverse-primary": "#ecb9c9", "surface-container-high": "#efe6e2", "surface-container": "#f5ece7", "surface-container-lowest": "#ffffff", "inverse-on-surface": "#f8efea", "secondary-fixed": "#ffdcc6", "on-primary-container": "#c696a6", "secondary-container": "#fec39b", "on-secondary-fixed": "#301400", "tertiary": "#391d00", "on-secondary-fixed-variant": "#653d1f", "on-primary-fixed": "#2f121e", "surface": "#fff8f5", "on-primary-fixed-variant": "#613c49", "inverse-surface": "#34302c", "primary-container": "#522f3c", "on-surface": "#1e1b18", "error": "#ba1a1a", "surface-dim": "#e1d8d4", "primary-fixed": "#ffd9e4", "secondary-fixed-dim": "#f4ba93", "background": "#fff8f5", "on-secondary": "#ffffff", "on-background": "#1e1b18", "tertiary-fixed": "#ffdcbe", "on-error-container": "#93000a", "tertiary-fixed-dim": "#f0bd8c", "on-error": "#ffffff", "on-secondary-container": "#794e2f", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#623f19", "on-surface-variant": "#4f4447", "surface-container-low": "#fbf2ed", "surface-variant": "#e9e1dc", "primary": "#391a26", "outline": "#817477", "surface-tint": "#7b5361", "tertiary-container": "#53320d", "on-tertiary-container": "#ca9a6c", "outline-variant": "#d3c2c6", "surface-bright": "#fff8f5", "on-tertiary": "#ffffff", "primary-fixed-dim": "#ecb9c9" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "space-sm": "0.5rem", "space-xl": "3rem", "margin-lg": "5rem", "space-lg": "1.75rem", "space-xs": "0.25rem", "gutter-lg": "2.5rem", "margin-md": "3rem", "space-md": "1rem", "margin": "1.5rem" }, "fontFamily": { "headline-md": ["Noto Serif"], "caption-academic": ["Noto Serif"], "display-lg-mobile": ["Noto Serif"], "display-lg": ["Noto Serif"], "headline-sm": ["Noto Serif"], "headline-lg-mobile": ["Noto Serif"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg": ["Noto Serif"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "headline-md": ["24px", { "lineHeight": "34px", "fontWeight": "500" }], "caption-academic": ["13px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "48px", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "30px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(82,47,60,0.05)]"><div class="h-20 w-full px-margin lg:px-margin-lg flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm select-none">Á</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-wide leading-none">SẮC ÁO VIỆT</span><span class="font-caption-academic text-caption-academic text-secondary italic mt-1 leading-none">Bảo tàng áo dài trực tuyến</span></div></div><nav class="hidden xl:flex items-center gap-1" data-active-classes="bg-primary text-on-primary font-medium rounded-lg shadow-sm"><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="trang-chu" href="#/">Trang chủ</a><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="phong-trung-bay" href="#/phong-trung-bay">Phòng trưng bày</a><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="bo-suu-tap" href="#/bo-suu-tap">Bộ sưu tập</a><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dong-thoi-gian" href="#/dong-thoi-gian">Dòng thời gian</a><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="nguon-va-ban-quyen" href="#/nguon-va-ban-quyen">Nguồn &amp; Bản quyền</a><a class="px-space-md py-space-xs rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="gioi-thieu" href="#/gioi-thieu">Giới thiệu</a></nav><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center gap-space-xs bg-surface-container px-space-md py-1.5 rounded-lg"><span class="material-symbols-outlined text-outline text-[18px]">workspace_premium</span><span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Dự án học thuật M3 - PH60600</span></div><button aria-label="Tìm kiếm di sản" class="w-9 h-9 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-space-xs" src="https://lh3.googleusercontent.com/aida/ALJJyrATXBVr7iiMUpPVZ0NINsugE-PlI2rAin_fdvI2xPizfpxN0v0HnujMCJNdwyNyanT-QGiDVdqLfMxQy1bCERwSwECVkXHoFd9eKaOSWuSPbCa2dsZiwr6YqcOmMjG9TraPzfu7Neum1TAD3hclqXTtoAme0ccrIxSdls0yNwF0vS_sMpPiCk4xPi7r9sH8fsuuzf0lYpvHa-k6tpZZX3xuua98Ap_wXzx9iHsDrZKCcQ"/></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Curatorial Banner & Metric Ribbon -->
+<section class="w-full px-margin lg:px-margin-lg pt-space-lg pb-space-md">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-gutter pb-space-lg border-b border-surface-container-highest">
+<div class="flex flex-col max-w-4xl">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">DANH MỤC LƯU TRỮ HỌC THUẬT M3</span>
+<span class="text-outline-variant">•</span>
+<span class="font-caption-academic text-caption-academic text-on-surface-variant italic">Giai đoạn Nghiên cứu &amp; Phục dựng Số</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Bộ Sưu Tập Hiện Vật &amp; Tư Liệu Số</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs leading-relaxed">
+          Tra cứu hệ thống 15 hồ sơ khoa học gồm 09 hiện vật vật chất được giới thiệu và 06 tư liệu nghiên cứu số chuyên sâu từ Bảo tàng Phụ nữ Nam Bộ.
+        </p>
+</div>
+<!-- Quick Archival Summary Pill -->
+<div class="flex items-center gap-space-md bg-surface-container px-space-md py-space-sm rounded-lg shadow-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">inventory_2</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary leading-none font-bold">15</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tổng hồ sơ</span>
+</div>
+</div>
+<div class="w-px h-8 bg-surface-container-highest"></div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">museum</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary leading-none font-bold">09</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hiện vật</span>
+</div>
+</div>
+<div class="w-px h-8 bg-surface-container-highest"></div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">menu_book</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary leading-none font-bold">06</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tư liệu số</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Filter Console -->
+<section class="w-full px-margin lg:px-margin-lg pb-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-md lg:p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Search Input & Reset Action -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center gap-space-md">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-11 pr-space-md py-space-sm bg-surface-container-lowest text-on-surface font-body-md text-body-md rounded-lg outline-none focus:ring-1 focus:ring-secondary placeholder:text-on-surface-variant/60 shadow-inner" id="searchInput" placeholder="Tìm theo mã hồ sơ (SAV-xxx), tên hiện vật, nhân vật hoặc niên đại..." type="text"/>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative min-w-[200px]">
+<select class="w-full appearance-none bg-surface-container-lowest px-space-md py-space-sm pr-9 text-on-surface font-label-md text-label-md rounded-lg outline-none focus:ring-1 focus:ring-secondary cursor-pointer" id="sortSelect">
+<option value="code-asc">Sắp xếp: Mã SAV (A-Z)</option>
+<option value="code-desc">Sắp xếp: Mã SAV (Z-A)</option>
+<option value="era">Sắp xếp: Niên đại lịch sử</option>
+<option value="name">Sắp xếp: Tên hiện vật</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-sm top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">swap_vert</span>
+</div>
+<button class="px-space-md py-space-sm bg-surface-container-highest hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-space-xs transition-colors" id="resetFilterBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>Đặt lại</span>
+</button>
+</div>
+</div>
+<!-- Segmented Category Filters -->
+<div class="flex flex-col gap-space-sm pt-space-xs border-t border-surface-container-high">
+<!-- Room Filters -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold mr-space-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">meeting_room</span>
+            Phòng trưng bày:
+          </span>
+<button class="filter-room-btn px-space-md py-1 rounded-lg font-label-md text-label-md bg-primary text-on-primary transition-all" data-room="all">Tất cả (15)</button>
+<button class="filter-room-btn px-space-md py-1 rounded-lg font-label-md text-label-md bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-all" data-room="room1">Phòng 01: Di sản ngũ thân (4)</button>
+<button class="filter-room-btn px-space-md py-1 rounded-lg font-label-md text-label-md bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-all" data-room="room2">Phòng 02: Lịch sử biến đổi (4)</button>
+<button class="filter-room-btn px-space-md py-1 rounded-lg font-label-md text-label-md bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-all" data-room="room3">Phòng 03: Áo dài &amp; Ký ức (4)</button>
+<button class="filter-room-btn px-space-md py-1 rounded-lg font-label-md text-label-md bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-all" data-room="room4">Phòng 04: Sáng tạo đương đại (3)</button>
+</div>
+<!-- Document Type Filters -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mt-1">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold mr-space-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">category</span>
+              Loại hồ sơ:
+            </span>
+<button class="filter-type-btn px-space-sm py-1 rounded-lg font-label-md text-label-md bg-primary text-on-primary transition-all" data-type="all">Tất cả (15)</button>
+<button class="filter-type-btn px-space-sm py-1 rounded-lg font-label-md text-label-md bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-all" data-type="artifact">Hiện vật vật chất (9)</button>
+<button class="filter-type-btn px-space-sm py-1 rounded-lg font-label-md text-label-md bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-all" data-type="document">Tư liệu số (6)</button>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-caption-academic text-caption-academic">
+<span class="material-symbols-outlined text-secondary text-[16px]">visibility</span>
+<span id="resultCountLabel">Hiển thị 15/15 hồ sơ đối chiếu</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curatorial Card Grid (15 Catalog Items) -->
+<section class="w-full px-margin lg:px-margin-lg pb-space-xl">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-lg" id="catalogGrid">
+<!-- SAV-001 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-001" data-era="1973" data-name="Áo dài bà Nguyễn Thị Bình" data-room="room3" data-type="artifact">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Exquisite archival Vietnamese Ao Dai worn by Madam Nguyen Thi Binh at Paris Peace Accords 1973. Deep burgundy silk textile on museum mannequin, delicate high collar, natural gallery spotlight, warm contemplative atmosphere, high-resolution heritage conservation display." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXODKJILT8o08SjQnZJ1dAe8U_4bNEv1V0hT7j32vt8CXqYefCAdgx6DnV8UBXxHwVVddZpBJFs-C5nFDAYC_gkj_K7IxqH6dRTgIBzm0cz-tAzb818164jh0uWnBKrQth9vRbEbtVkRMpDD8Bta6jPCv8sahZTEQS-FFRycZwv6XkZrLO-ylMkiEnXbGBIkQC0xRR_Dwh5-ouSwAkgiUWBgMI6OMGXLGrQKCLCy0s"/>
+<div class="absolute top-space-sm left-space-sm bg-primary-container/90 text-on-primary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-001
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-primary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Hiện vật
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Niên đại: 1973 • Ngoại giao
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 03: Áo dài &amp; Ký ức</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Áo dài bà Nguyễn Thị Bình</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Trang phục ngoại giao mang tính biểu tượng tại Hội nghị Hiệp định Paris 1973, khẳng định phong thái kiên cường và vị thế phụ nữ Việt Nam trên trường quốc tế.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Hồ sơ</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-002 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-002" data-era="1968" data-name="Áo dài Mẹ VNAH Nguyễn Thị Bâu" data-room="room3" data-type="artifact">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Historical rustic southern Vietnamese traditional Ao Dai belonging to Heroic Mother Nguyen Thi Bau. Dark indigo dyed handwoven cotton, weathered texture preserved in soft museum lighting, curatorial archive display setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBF2Ag9KUfY7KkXq-lYvFKX0c9KIRW5YV41fO2_DIG4KqhSznwRmVLFU7MssiZycrRfbYqN4h11NkOWCt8XOs4BWIU9Mm8tXPdg_05w1o6xSLwrpxwzm9PmVs9IaMXQUq_a_xmD7uE42EknJYozXHP74Ae-g6r_QqztmqEqg1o3k-Q36XdQTxu6hfM7B1jUoK6qDjO9GZ_8ud3U772Gu6BUzagT1oLVsXkylSwcn64"/>
+<div class="absolute top-space-sm left-space-sm bg-primary-container/90 text-on-primary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-002
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-primary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Hiện vật
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Thời kỳ Kháng chiến
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 03: Áo dài &amp; Ký ức</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Áo dài Mẹ VNAH Nguyễn Thị Bâu</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Hiện vật minh chứng lòng kiên trung và đức hy sinh thầm lặng của người mẹ miền Nam trong những năm tháng kháng chiến giữ nước cam go.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Hồ sơ</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-003 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-003" data-era="1964" data-name="Áo dài cưới bà Phan Thị Quyên" data-room="room3" data-type="artifact">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional 1960s Vietnamese wedding Ao Dai of Phan Thi Quyen wife of hero Nguyen Van Troi. Pale rose silk jacquard fabric, elegant high stand collar, understated tailoring, warm nostalgic archival photography tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB91reamw9znEdVxEtv5CNB3CQLZSXD3rmbq8TxfCaWz9HZIsDbBBP6RD54Gm1tr6MNPetROGSt5Wvv_Wy0ewEz8CxWldhtjHFGjRhQBADzVE3d0Yga5a7MICQOEZ1qG0Jy5FwzvsmmhO67VCueuQCKMlrtISls9mKUw27pYVaV2N8fKLk2uLW3XnrP_JYTobG6Vn4oqAMrTpHREapbKm8OXFeTRXlcluqOfJlnSXrr"/>
+<div class="absolute top-space-sm left-space-sm bg-primary-container/90 text-on-primary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-003
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-primary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Hiện vật
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Niên đại: 1964 • Tình yêu thời chiến
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 03: Áo dài &amp; Ký ức</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Áo dài cưới bà Phan Thị Quyên</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Kỷ vật tình yêu thiêng liêng gắn liền với cuộc đời anh hùng Nguyễn Văn Trỗi, biểu hiện vẻ đẹp thanh lịch thuần khiết giữa khói lửa chiến tranh.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Hồ sơ</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-004 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-004" data-era="1970" data-name="Áo dài Mẹ VNAH Bùi Thị Mè" data-room="room3" data-type="artifact">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Archival black and deep brown brocade Vietnamese Ao Dai belonging to Revolutionary Mother Bui Thi Me. Displayed in academic museum case with archival lighting, subtle reflections, tactile silk texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG6-jOLe7rGd8_1b0HGvxl7yYzfUbN7fI47v7p95HpEVJHahwmnV1xmS0tmHXjSC6z6tyrNklvYVBjhTj521EJVTg_ONMpeGw-GbNt8xhB7m4psHLuPHJpJuZ2hIko_Vkgtdu0uzzHOreGkGdubm670wCqAEVu2FmrakG3oMV4-XnB6tJXR2AfGc2rnNBO1xaADdV50W8dy9fwn1QIerdpqcx-KWB2o9KCTSsKl9eZ"/>
+<div class="absolute top-space-sm left-space-sm bg-primary-container/90 text-on-primary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-004
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-primary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Hiện vật
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Thời kỳ Cách mạng miền Nam
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 03: Áo dài &amp; Ký ức</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Áo dài Mẹ VNAH Bùi Thị Mè</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Trang phục gắn bó cùng nguyên Thứ trưởng Bộ Y tế Xã hội và Thương binh Chính phủ CMLTCH miền Nam Việt Nam trong sự nghiệp bảo vệ đất nước.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Hồ sơ</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-005 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-005" data-era="2018" data-name="Áo dài Non nước hữu tình - NTK Đinh Văn Thơ" data-room="room4" data-type="artifact">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Contemporary haute couture Vietnamese Ao Dai titled Non nuoc huu tinh designed by Dinh Van Tho. Exquisite gold and emerald hand embroidery portraying Vietnamese landscape on fine silk chiffon, museum lighting, elegant artistic posture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_CoLyoJC-wL_TW37Yrlu4PFShZLIDQYIf7NXWLZmNoeTdhCuWQ32NpeiLBbvQKNR-A-h6sfKJSK7EEnVw753njjo-MxAq_361wKL6FPOuURlGg2MLo0SXqR21FFbOn22jnaSOTqq86Duogam3KhwyOiLbI7N89DyCoDAWwArZKVGJ3BraDqf0lmOns2TSUK9gFGAMyGX_XBVIrzj1Z7f6St8XnriKfYDKlUOrQvkF"/>
+<div class="absolute top-space-sm left-space-sm bg-primary-container/90 text-on-primary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-005
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-primary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Hiện vật
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Đương đại • NTK Đinh Văn Thơ
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 04: Sáng tạo đương đại</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Áo dài "Non nước hữu tình"</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Tác phẩm thêu tay công phu tái hiện cảnh sắc thiên nhiên kỳ vĩ, giao hòa nhuần nhuyễn giữa kỹ thuật thủ công truyền thống và ngôn ngữ thời trang đương đại.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Hồ sơ</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-006 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-006" data-era="2019" data-name="Áo dài Xuôi dòng Việt Nam - NTK Đinh Văn Thơ" data-room="room4" data-type="artifact">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern Vietnamese Ao Dai artwork Xuoi dong Viet Nam by designer Dinh Van Tho. Fluid turquoise and ivory gradient silk adorned with delicate lotus and river motifs, displayed in professional curatorial exhibition gallery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBahaIaeckY9egSkJ4sNsrgPNC0-3xdf9V7Id4spghzdy4ypjVF2II2gwvLsC_aZJHvckLfgO0o69r1Sv_QXgeMTKLsEkXOtK6Btp_zymP51qTLUwdu3rSh4ZdrqN95jvu3A6fwjy8GtqkhGyxvlxavavUnsxJFpNbOBN5tSRLcIegYxzLh81nMXSVqdw5k1lSrBwNOaTiLT273rOJ7Hp_wwwZqbQcDl17H_Jyg4E1"/>
+<div class="absolute top-space-sm left-space-sm bg-primary-container/90 text-on-primary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-006
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-primary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Hiện vật
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Đương đại • NTK Đinh Văn Thơ
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 04: Sáng tạo đương đại</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Áo dài "Xuôi dòng Việt Nam"</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Ý tưởng tôn vinh vẻ đẹp dòng sông Mekong và văn hóa sông nước phương Nam qua những lớp tơ lụa mềm mại và nét kim tuyến tinh xảo.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Hồ sơ</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-007 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-007" data-era="2020" data-name="Áo dài Hà Nội xưa - NTK Đinh Văn Thơ" data-room="room4" data-type="artifact">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Nostalgic Ha Noi Xua Ao Dai design by Dinh Van Tho. Subtle sepia and pearl white silk taffeta with miniature hand embroidered Old Quarter scenes, high collar tailoring, serene museum setting with soft amber warm glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUgq5UtpsbgYQuwQcDHtN4mUwXCE0IfJ3bFTON-4OrNZMZ2JvBcSrVWk11_sD1ML9LNBTF_7pa2lIDKLMc61nv-AV7Q1xLxVv0mcdgtP3e2EF-C4-QLlHx03DTSmZthV257jlE8CGpdW1EmpD-8UFJF112lgwM5sY__ksNQkyIZcZ-N1x3qJoxB-5rR6N0xQSJk2S6nP0bOAi2jfmjl2LBxW3j2neOlteQIwgPDmyk"/>
+<div class="absolute top-space-sm left-space-sm bg-primary-container/90 text-on-primary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-007
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-primary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Hiện vật
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Đương đại • NTK Đinh Văn Thơ
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 04: Sáng tạo đương đại</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Áo dài "Hà Nội xưa"</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Khắc họa hình ảnh kinh kỳ cổ kính ngàn năm văn hiến, khơi gợi nét đoan trang hoài niệm của người phụ nữ Thăng Long - Hà Nội.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Hồ sơ</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-008 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-008" data-era="1802" data-name="Bộ áo dài ngũ thân nữ - Nghệ nhân Năm Tuyền" data-room="room1" data-type="artifact">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Reconstructed 5-panel traditional Vietnamese women Ao Dai Ngu Than by master artisan Nam Tuyen. Rich saffron gold raw silk, five panels construction, five bronze buttons, pristine archival academic showcase." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Bsn3-MWzcIAo594pIzXy1ALgEuWCwj2DtW0bbXBBS8U0qF2e2vL73_XR979qr7JdqT1iopBYQR805PU3F71TQ5FqpieE2J5EF63EKpScwMH47ZTlsCYj95SYn1Iuj5tJMqYbLvvsIpuqprCbnjbxqQ9lvGyvXk2jila4Pq2CudBEsRgkPXhGSmP4wLOrpEElpfIXbN6fp6z4YdROtJjnUvoCwlUUiwdb3I1uWv03"/>
+<div class="absolute top-space-sm left-space-sm bg-primary-container/90 text-on-primary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-008
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-primary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Hiện vật
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Phục dựng quy chuẩn • Nguyễn triều
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 01: Di sản ngũ thân</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Bộ áo dài ngũ thân nữ</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Mô hình phục chế chuẩn mực cấu trúc ngũ thân lập lĩnh, năm nút khuy cài tượng trưng cho ngũ thường (Nhân, Lễ, Nghĩa, Trí, Tín) của người phụ nữ.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Hồ sơ</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-009 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-009" data-era="1802" data-name="Bộ áo dài ngũ thân nam - Nghệ nhân Năm Tuyền" data-room="room1" data-type="artifact">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional Vietnamese men Ao Dai Ngu Than crafted by artisan Nam Tuyen. Deep brown raw silk shantung fabric with matching head turban, standing upright collar, authentic imperial era tailoring study display." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_9DESw8eXZIjXaccp0SkUqHUsrp8-6dMQiR0RfpEqz3iNQGVvmhZvDvtgXb-Cy2lrgIVaTyr0JrFb8hCYz430E1QO4lbdTsLDUSjHvgCKiyfE7j1v9gFLOasomyRTQRjKp8ZgRlmSqJY9h_jNiHSmgzYGzqD6DYivEbEfswso40A32-qeg5FhXtt9y_DUih2WKtOYQZuGRB1tNa9C-dOn6Ld7GG9g37pwzdJMTSgo"/>
+<div class="absolute top-space-sm left-space-sm bg-primary-container/90 text-on-primary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-009
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-primary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Hiện vật
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Đối chiếu cấu trúc • Phục chế
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 01: Di sản ngũ thân</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Bộ áo dài ngũ thân nam</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Mẫu vật đối chiếu cấu trúc phom dáng ngũ thân nam giới thế kỷ XIX, nhấn mạnh tính tôn nghiêm, chừng mực và sự hòa hợp nhân luân truyền thống.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Hồ sơ</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-010 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-010" data-era="1985" data-name="Tư liệu Bộ sưu tập áo dài phụ nữ Việt Nam" data-room="room1" data-type="document">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Scholarly archival research monograph book on Vietnamese Women Ao Dai collection open on a museum research desk. Fine typography, historical black and white illustrations, delicate hand notations, warm scholarly ambience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxfgFdt3rOyNfE2SHIEDnmtjH2CdWEiTFgEG2ClnwJ_AMSrcwEtEnQ132fgRePLrqOsn--mYsRaIkIva9HPdaP-uD_885rkCm4dDWY3ijYPPUYeqkR2jLKgt__0G-kuvLZ31Sas7OF34FbXBJU6W91m3Q_rjszUHxzOrnNPhD78s93xIQ71W6epVMZ9vOrZ2yx9iEFEW_Eg8Q6lAyBlTNTr1og13knNVrP30YnQVk7"/>
+<div class="absolute top-space-sm left-space-sm bg-tertiary-container/90 text-on-tertiary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-010
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-secondary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Tư liệu số
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Chuyên khảo học thuật số
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 01: Di sản ngũ thân</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Tư liệu "Bộ sưu tập áo dài phụ nữ VN"</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Hồ sơ tổng hợp các mẫu rập, bản vẽ và biên bản giám định hiện vật gốc được số hóa đa tầng phục vụ công tác đối chiếu học thuật.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Đọc tư liệu</span>
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-011 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-011" data-era="1930" data-name="Tư liệu Áo dài xưa và nay" data-room="room2" data-type="document">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Comparative historical documentation chart of Vietnamese Ao Dai evolution from Lemur 1930s to Le Pho and modern silhouettes. Old sketches and technical tailoring drafts displayed under warm curatorial lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV0y_bWil2APfamJLlwSiAqbuCvVDlloUm5jI4uOYBDcyraiFNWf5hXlXx_vtIFEyBFcAomsQ7CxwLf4fptPJgfgXXl7NyjWNZc4gXCZw2jnNrcHFbJFPjihiGHfBgi1ts78UZ5RWgAO_rb2fMf6C4KbNTuRqauYaLtcbj3vqWEPq9jFpi7gACFW2sW1JS9ml0Mx1KYvuXbaX4AJCLPMc2tIMNN6ONIoP6MX9LLDvG"/>
+<div class="absolute top-space-sm left-space-sm bg-tertiary-container/90 text-on-tertiary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-011
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-secondary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Tư liệu số
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Nghiên cứu tiến trình biến đổi
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 02: Lịch sử biến đổi</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Tư liệu "Áo dài xưa và nay"</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Khảo luận phân tích quá trình cách tân từ phom dáng Lemur Cát Tường đến thời kỳ áo dài Raglan và các biến thể đô thị Sài Gòn thập niên 1960.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Đọc tư liệu</span>
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-012 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-012" data-era="1958" data-name="Tư liệu Khúc biến tấu của chiếc áo dài truyền thống" data-room="room2" data-type="document">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Vintage mid-century tailoring drafts and fabric samples of the boat-neck Madame Nhu Ao Dai and modern variations. Preserved document on aged parchment, academic museum exhibition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnaoxuscDCKsP7hrPFwafe417QPr-uOkMY91rEoqxew774JUyyfAkrRvKCXYt7gQAYyw1l56SUgwsO2rguOoFdbBjvVSswN9hOn1m3-A0Bd1tjB4KkBuIqri09OOAOfugmN26nnCP0_1wvlJSpAiAgnq2enfmcmawsCj8WThW2tE8IMhd_uH9Nf_0ygT5DfABhSz3IGM4RxtLE67wVnw5wYf7UVPmUyPsz1FkiWGOa"/>
+<div class="absolute top-space-sm left-space-sm bg-tertiary-container/90 text-on-tertiary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-012
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-secondary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Tư liệu số
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Giai đoạn Tân canh thế kỷ XX
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 02: Lịch sử biến đổi</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Tư liệu "Khúc biến tấu của chiếc áo dài..."</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Tài liệu chuyên khảo về sự đổi mới kỹ thuật ráp tay Raglan của nhà may Đỗ Trịnh, giải phóng bờ vai và tạo đường cong mềm mại cho phụ nữ Việt.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Đọc tư liệu</span>
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-013 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-013" data-era="1945" data-name="Tư liệu Áo dài – Tinh hoa truyền thống dân tộc Việt" data-room="room2" data-type="document">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional silk weaving loom and academic manuscript depicting ancient Vietnamese weaving techniques from Van Phuc and Tan Chau. Warm heritage lighting, museum archive showcase." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX6yI_-CFoOaykPKU1r_-67uQ9GmdntVGDFqi064tyM2KulqCmr0shdQk6vHw3oxu6EfE4YgP-io73_XPNtxhN6AVKaZv5z08WL692wM6rkHwyqabs_o_AYXlByS80SqfiW6cjFWkW51zcNy1RF_jaypmqEGn1zAOCnJpCy5KtQ6MbPtTDdcoE2UwSEsAV1dBkV1IFhbXo4WPjLh3gKf0paCaKY7PCnExXcePJIYOD"/>
+<div class="absolute top-space-sm left-space-sm bg-tertiary-container/90 text-on-tertiary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-013
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-secondary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Tư liệu số
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Di sản dệt may &amp; Kỹ thuật thủ công
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 02: Lịch sử biến đổi</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Tư liệu "Áo dài – Tinh hoa truyền thống..."</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Khảo sát các vùng dệt lụa nức tiếng (Vạn Phúc, Lãnh Mỹ A, Tân Châu) tạo nên cốt cách chất liệu cho tà áo dài truyền thống qua nhiều thế kỷ.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Đọc tư liệu</span>
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-014 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-014" data-era="2000" data-name="Tư liệu Áo dài – Giá trị di sản văn hóa của người Việt" data-room="room2" data-type="document">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Official cultural heritage dossier documentation on Vietnamese Ao Dai national recognition. Intricate gold seal, embossed calligraphy title, museum research library setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUwLbJSuzLHZi6RFZQutcp7TZokHgZBqr4wlunXCLZfzBC2IrUR0YdgKmZ9Vxvq0bbWNxwIzRq3oL-caoa3kTQV6iS6fguFM2YhOhVK5WuaXOC56y5iMG8VmF8LO8rJcudtwVRbEIRD7UjPHPMGu2V9tnYdt4821gO7vNBOArHG_oydIpUPfCiiiqpA6_KSNfoULTctcSC_V8E5taBXyKjm3qFAqos_zpIvM9sy8UB"/>
+<div class="absolute top-space-sm left-space-sm bg-tertiary-container/90 text-on-tertiary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-014
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-secondary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Tư liệu số
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Hồ sơ Di sản Văn hóa Phi vật thể
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 02: Lịch sử biến đổi</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Tư liệu "Áo dài – Giá trị di sản văn hóa..."</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Tập hợp các luận cứ khoa học và hồ sơ đề nghị công nhận Áo dài Việt Nam là Di sản Văn hóa Phi vật thể Quốc gia và nhân loại.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Đọc tư liệu</span>
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</button>
+</div>
+</div>
+</article>
+<!-- SAV-015 -->
+<article class="catalog-card flex flex-col bg-surface-container-lowest rounded-xl p-space-sm shadow-sm hover:shadow-md transition-shadow group relative" data-code="SAV-015" data-era="2021" data-name="Tư liệu Áo dài ngũ thân – Hành trình trở lại" data-room="room1" data-type="document">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Contemporary cultural revival symposium report and photographs of young Vietnamese people wearing five-panel Ngu Than robes in modern cities. Scholarly publication spread on exhibition plinth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmh6ZaebJj2GSRFUiXWCgbZtYS1nQONI29XSKZhSz360nufCyjb3SD6ohW3nbb1kjZ1M3xBPp540yKiK7tpWW0OkvAT5ndRCbvApRuLu0gljeP1q-bT9PmCED6RYAhgQfJ_HB6Lb7jvX1dNXS6jI0Z3e8ttQ2xgfh3sBAE7_UVysHIEqWe29Ds3pwUKUJXN4yBpWwwb1GR_zM0hpJq2PlUMggqcJcihOwiT5yJAwz3"/>
+<div class="absolute top-space-sm left-space-sm bg-tertiary-container/90 text-on-tertiary-container px-space-sm py-0.5 rounded font-label-sm text-label-sm tracking-wider font-semibold uppercase backdrop-blur-sm">
+            SAV-015
+          </div>
+<div class="absolute top-space-sm right-space-sm bg-surface/90 text-secondary px-space-sm py-0.5 rounded font-label-sm text-label-sm font-semibold backdrop-blur-sm">
+            Tư liệu số
+          </div>
+<div class="absolute bottom-space-sm left-space-sm bg-surface-container-lowest/90 px-space-sm py-0.5 rounded font-caption-academic text-caption-academic text-secondary italic">
+            Phong trào Phục hưng Cổ phục
+          </div>
+</div>
+<div class="flex flex-col p-space-md flex-1 justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Phòng 01: Di sản ngũ thân</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors line-clamp-1">Tư liệu "Áo dài ngũ thân – Hành trình..."</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+              Báo cáo khoa học về làn sóng chấn hưng quốc phục ngũ thân nam nữ trong đời sống công sở, lễ hội và ngoại giao văn hóa đương đại.
+            </p>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between">
+<span class="font-caption-academic text-caption-academic text-outline">Bảo tàng Phụ nữ Nam Bộ</span>
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-label-md text-label-md rounded-lg transition-colors flex items-center gap-1" type="button">
+<span>Đọc tư liệu</span>
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty State (hidden by default) -->
+<div class="hidden w-full py-space-xl text-center flex-col items-center justify-center bg-surface-container-low rounded-xl mt-space-md" id="emptyState">
+<span class="material-symbols-outlined text-outline text-[48px] mb-space-xs">manage_search</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Không tìm thấy hồ sơ phù hợp</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-md">
+        Vui lòng thử từ khóa tra cứu khác hoặc chọn lại phân loại phòng trưng bày để đối chiếu kết quả.
+      </p>
+<button class="mt-space-md px-space-md py-1.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md" id="emptyResetBtn" type="button">
+        Xóa điều kiện lọc
+      </button>
+</div>
+</section>
+<!-- Curatorial Transparency & Scholarly Methodology Note -->
+<section class="w-full px-margin lg:px-margin-lg pb-space-lg">
+<div class="bg-surface-container rounded-xl p-space-md lg:p-space-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-md max-w-3xl">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Minh Bạch Đồ Họa &amp; Nguồn Cấp Dữ Liệu Nghiên Cứu</h4>
+<p class="font-caption-academic text-caption-academic text-on-surface-variant mt-1 leading-relaxed">
+            Hệ thống 15 mã hồ sơ định danh (SAV-001 đến SAV-015) được lập theo danh mục đối chiếu hiện vật của Bảo tàng Phụ nữ Nam Bộ phục vụ đồ án giai đoạn M3. Tất cả tư liệu và hình ảnh đồ họa số được giám tuyển với tiêu chuẩn nghiêm ngặt nhằm tôn vinh giá trị văn hóa và giáo dục di sản trang phục Việt Nam.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-stretch md:self-auto justify-end">
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase bg-surface-container-lowest px-space-md py-1.5 rounded-lg shadow-sm whitespace-nowrap">
+          Đề cương E01 • PH60600
+        </span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  (function () {
+    const searchInput = document.getElementById('searchInput');
+    const sortSelect = document.getElementById('sortSelect');
+    const resetFilterBtn = document.getElementById('resetFilterBtn');
+    const emptyResetBtn = document.getElementById('emptyResetBtn');
+    const resultCountLabel = document.getElementById('resultCountLabel');
+    const catalogGrid = document.getElementById('catalogGrid');
+    const emptyState = document.getElementById('emptyState');
+    const cards = Array.from(document.querySelectorAll('.catalog-card'));
+    const roomButtons = Array.from(document.querySelectorAll('.filter-room-btn'));
+    const typeButtons = Array.from(document.querySelectorAll('.filter-type-btn'));
+
+    let currentRoom = 'all';
+    let currentType = 'all';
+
+    function filterAndSortCards() {
+      const searchTerm = (searchInput.value || '').trim().toLowerCase();
+      const sortValue = sortSelect.value;
+
+      let visibleCount = 0;
+
+      // Filter
+      cards.forEach(card => {
+        const code = (card.getAttribute('data-code') || '').toLowerCase();
+        const room = card.getAttribute('data-room');
+        const type = card.getAttribute('data-type');
+        const era = (card.getAttribute('data-era') || '').toLowerCase();
+        const name = (card.getAttribute('data-name') || '').toLowerCase();
+        const textContent = card.innerText.toLowerCase();
+
+        const matchesRoom = (currentRoom === 'all' || room === currentRoom);
+        const matchesType = (currentType === 'all' || type === currentType);
+        const matchesSearch = !searchTerm ||
+          code.includes(searchTerm) ||
+          name.includes(searchTerm) ||
+          era.includes(searchTerm) ||
+          textContent.includes(searchTerm);
+
+        if (matchesRoom && matchesType && matchesSearch) {
+          card.classList.remove('hidden');
+          card.classList.add('flex');
+          visibleCount++;
+        } else {
+          card.classList.remove('flex');
+          card.classList.add('hidden');
+        }
+      });
+
+      // Sort visible cards in DOM
+      const visibleCards = cards.filter(c => !c.classList.contains('hidden'));
+      visibleCards.sort((a, b) => {
+        if (sortValue === 'code-asc') {
+          return a.getAttribute('data-code').localeCompare(b.getAttribute('data-code'));
+        }
+        if (sortValue === 'code-desc') {
+          return b.getAttribute('data-code').localeCompare(a.getAttribute('data-code'));
+        }
+        if (sortValue === 'era') {
+          return (parseInt(a.getAttribute('data-era')) || 0) - (parseInt(b.getAttribute('data-era')) || 0);
+        }
+        if (sortValue === 'name') {
+          return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name'), 'vi');
+        }
+        return 0;
+      });
+
+      visibleCards.forEach(c => catalogGrid.appendChild(c));
+
+      // Update counters & state
+      resultCountLabel.textContent = `Hiển thị ${visibleCount}/15 hồ sơ đối chiếu`;
+
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+      } else {
+        emptyState.classList.remove('flex');
+        emptyState.classList.add('hidden');
+      }
+    }
+
+    // Room Filter Event
+    roomButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentRoom = btn.getAttribute('data-room');
+        roomButtons.forEach(b => {
+          b.className = 'filter-room-btn px-space-md py-1 rounded-lg font-label-md text-label-md bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-all';
+        });
+        btn.className = 'filter-room-btn px-space-md py-1 rounded-lg font-label-md text-label-md bg-primary text-on-primary transition-all';
+        filterAndSortCards();
+      });
+    });
+
+    // Type Filter Event
+    typeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentType = btn.getAttribute('data-type');
+        typeButtons.forEach(b => {
+          b.className = 'filter-type-btn px-space-sm py-1 rounded-lg font-label-md text-label-md bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-all';
+        });
+        btn.className = 'filter-type-btn px-space-sm py-1 rounded-lg font-label-md text-label-md bg-primary text-on-primary transition-all';
+        filterAndSortCards();
+      });
+    });
+
+    // Search and Sort Listeners
+    searchInput.addEventListener('input', filterAndSortCards);
+    sortSelect.addEventListener('change', filterAndSortCards);
+
+    function resetFilters() {
+      searchInput.value = '';
+      sortSelect.value = 'code-asc';
+      currentRoom = 'all';
+      currentType = 'all';
+
+      roomButtons.forEach((b, i) => {
+        b.className = i === 0
+          ? 'filter-room-btn px-space-md py-1 rounded-lg font-label-md text-label-md bg-primary text-on-primary transition-all'
+          : 'filter-room-btn px-space-md py-1 rounded-lg font-label-md text-label-md bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-all';
+      });
+
+      typeButtons.forEach((b, i) => {
+        b.className = i === 0
+          ? 'filter-type-btn px-space-sm py-1 rounded-lg font-label-md text-label-md bg-primary text-on-primary transition-all'
+          : 'filter-type-btn px-space-sm py-1 rounded-lg font-label-md text-label-md bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-all';
+      });
+
+      filterAndSortCards();
+    }
+
+    resetFilterBtn.addEventListener('click', resetFilters);
+    emptyResetBtn.addEventListener('click', resetFilters);
+
+    // Initial run
+    filterAndSortCards();
+  })();
+</script></main><footer class="w-full bg-surface-container-low mt-space-xl pt-space-xl pb-space-lg shadow-[0_-1px_8px_rgba(82,47,60,0.03)]"><div class="w-full px-margin lg:px-margin-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-lg pb-space-xl"><div class="lg:col-span-4 flex flex-col gap-space-sm"><div class="flex items-center gap-space-md mb-space-xs"><div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm">Á</div><span class="font-headline-sm text-headline-sm text-primary">SẮC ÁO VIỆT</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Bảo tàng số chuyên đề nghiên cứu áo dài phụ nữ Việt Nam qua các thời kỳ lịch sử. Một không gian giám tuyển số tôn vinh di sản dệt may truyền thống, phom dáng cung đình và nét thanh lịch của người phụ nữ Việt.</p><div class="mt-space-sm flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-caption-academic text-caption-academic text-secondary italic">Không gian lưu trữ di sản số học thuật</span></div></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase text-primary tracking-wider font-semibold">Đồ án học thuật</span><div class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface-variant"><p><span class="font-medium text-on-surface">Sinh viên thực hiện:</span> Bùi Trung Nam</p><p><span class="font-medium text-on-surface">Mã số sinh viên:</span> PH60600</p><p><span class="font-medium text-on-surface">Mã ý tưởng:</span> E01</p><p><span class="font-medium text-on-surface">Mốc triển khai:</span> Giai đoạn M3 (Archival Scaffolding)</p></div></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase text-primary tracking-wider font-semibold">Đơn vị lưu giữ &amp; Cung cấp nguồn</span><div class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface-variant"><p class="font-medium text-on-surface">Bảo tàng Phụ nữ Nam Bộ</p><p class="leading-relaxed">200-202 Đường Võ Thị Sáu, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh</p><p class="font-caption-academic text-caption-academic text-secondary italic mt-1">Hợp tác nghiên cứu tư liệu và hiện vật phục dựng số</p></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><span class="font-label-md text-label-md uppercase text-primary tracking-wider font-semibold">Điều hướng nhanh</span><div class="flex flex-col gap-2 font-body-sm text-body-sm"><a class="text-on-surface-variant hover:text-primary transition-colors" href="#/">Trang chủ bảo tàng</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#/phong-trung-bay">Phòng trưng bày</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#/bo-suu-tap">Bộ sưu tập hiện vật</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#/dong-thoi-gian">Dòng thời gian áo dài</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#/nguon-va-ban-quyen">Nguồn &amp; Bản quyền</a><a class="text-on-surface-variant hover:text-primary transition-colors" href="#/gioi-thieu">Về dự án Sắc Áo Việt</a></div></div></div><div class="pt-space-md bg-surface-container rounded-lg p-space-md mb-space-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">shield_with_heart</span><div><h4 class="font-label-md text-label-md text-primary font-semibold uppercase tracking-wider">Cảnh báo bản quyền &amp; Sử dụng học thuật</h4><p class="font-caption-academic text-caption-academic text-on-surface-variant mt-0.5">Tất cả ảnh hiện vật trong giao diện là đồ họa minh họa phục dựng phục vụ mục đích nghiên cứu học thuật M3, chưa cấp phép sử dụng thương mại hoặc khai thác độc quyền tư liệu gốc.</p></div></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md text-on-surface-variant font-caption-academic text-caption-academic"><p>© 2024 Sắc Áo Việt - Hành trình áo dài phụ nữ Việt Nam qua các thời kỳ. Bảo tồn di sản văn hóa phi vật thể.</p><p class="text-outline">Dự án học thuật mã E01 • Bùi Trung Nam PH60600</p></div></div></footer></body></html>
