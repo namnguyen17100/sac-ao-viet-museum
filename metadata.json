@@ -1,8 +1,0 @@
-{
-  "name": "Sắc Áo Việt - Bảo tàng áo dài trực tuyến",
-  "description": "Không gian trưng bày và lưu trữ di sản số nghiên cứu hành trình áo dài phụ nữ Việt Nam qua các thời kỳ lịch sử (Dự án học thuật M3 - PH60600).",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
